@@ -1,0 +1,120 @@
+@media(max-width:@mobile-width-only) {
+  .main-nav {
+    height: 0;
+    opacity: 0;
+    transition: height 0.5s, opacity 0.2s;
+    pointer-events: none;
+  }
+
+  .main-nav--opened {
+    height: 190px;
+    opacity: 1;
+    transition: height 0.5s, opacity 1.5s ease-in-out;
+    pointer-events: all;
+  }
+}
+
+.main-nav__toggle {
+  width: 24px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media(min-width:@tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__toggle--closed .main-nav__toggle__icon--close {
+  display: none;
+}
+
+.main-nav__toggle--opened .main-nav__toggle__icon--open {
+  display: none;
+}
+
+.main-nav__list {
+  margin: 0;
+  list-style: none;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media(min-width:@tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  @media(min-width:@desktop-width) {
+    font-size: 20px;
+  }
+}
+
+.main-nav__list__item {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-top: 1px solid #E6E6E6;
+
+  @media(min-width:@tablet-width) {
+    margin-right: 34px;
+    margin-left: 0;
+    padding: 0;
+    border: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.main-nav__list__item a {
+  position: relative;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @media(min-width:@desktop-width) {
+    color: #ffffff;
+  }
+}
+
+.main-nav__list__item--active a {
+  @media(min-width:@tablet-width) {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      height: 2px;
+      width: 100%;
+      background-color: @basic-green;
+    }
+  }
+
+  @media(min-width:@desktop-width) {
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.main-nav__list--secondary a {
+  color: black;
+
+  @media(min-width:@desktop-width) {
+    &::after {
+      background-color: @basic-green;
+    }
+  }
+}

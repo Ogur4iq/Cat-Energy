@@ -1,0 +1,127 @@
+.page-footer {
+  padding-top: 39px;
+  padding-bottom: 22px;
+  background-color: @basic-grey;
+
+  @media(min-width:@tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 59px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(min-width:@tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__logo {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 31px;
+  border-bottom: 1px solid #D9D9D9;
+
+  @media(min-width:@tablet-width) {
+    padding-bottom: 0;
+    border-bottom: none;
+    max-width: 128px;
+  }
+}
+
+.footer__social-links {
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #D9D9D9;
+
+  @media(min-width:@tablet-width) {
+    padding-bottom: 0;
+    padding-top: 0;
+    border-bottom: none;
+    width: 130px;
+  }
+}
+
+.footer__social-links__list {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.footer__copyright {
+  padding-top: 21px;
+  width: 100%;
+
+  @media(min-width:@tablet-width) {
+    padding-top: 0;
+    width: 163px;
+  }
+}
+
+.footer__copyright__link {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright__link span {
+  font-family: Arial, sans-serif;
+  line-height: 18px;
+}
+
+.vkontakte svg {
+  width: 30px;
+  height: 22px;
+}
+
+.instagram svg {
+  width: 23px;
+  height: 23px;
+}
+
+.facebook svg {
+  width: 28px;
+  height: 33px;
+}
+
+.title-logo:hover {
+  opacity: 80%;
+}
+
+.title-logo:active {
+  opacity: 60%;
+}
+
+.vkontakte:hover svg,
+.instagram:hover svg,
+.footer__copyright__link:hover svg {
+  fill: @basic-green;
+}
+
+.vkontakte:active svg,
+.instagram:active svg,
+.footer__copyright__link:active svg {
+  fill: fade(@basic-green, 30%);
+}
+
+.footer__copyright__link:active span {
+  opacity: 30%;
+}
+
+.facebook:hover svg {
+  stroke: @basic-green;
+}
+
+.facebook:active svg {
+  stroke: fade(@basic-green, 30%);
+}
